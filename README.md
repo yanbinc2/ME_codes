@@ -70,7 +70,7 @@
 
 
   
-    Outputs: contain the following variables:
+    Outputs:
 
        MNIST_K200_seedinds_version2
 
@@ -180,7 +180,7 @@
         cssizethre: Threshold on the number of non-singleton members of a component.  If the number of non-singleton members > 0 and <= cssizethre, then treat it as the merged class.  Set cssizethre=3.
 
 
-    Outputs: contain the following variables:
+    Outputs:
    
         MNIST_K200_mergedseedclasslabels_version2
 
