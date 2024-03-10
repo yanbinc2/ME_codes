@@ -1,11 +1,17 @@
 #==========================================================
 #### ME Algorithm, 2024
-#### Yan-Bin Chen (陳彥賓)  yanbin@ntu.edu.tw; Chen-Hsiang Yeang (楊振翔)   chyeang@stat.sinica.edu.tw; 	Khong Loon Tiong (張孔綸) 	khongloontiong@gmail.com
+#### Yan-Bin Chen (陳彥賓)  yanbin@ntu.edu.tw; Chen-Hsiang Yeang (楊振翔)   chyeang@stat.sinica.edu.tw; 	Khong Loon Tiong 	khongloontiong@gmail.com
 #### Institute of Statistical Science, Academia Sinica, Taipei, Taiwan.
 #### March, 2024
 #==========================================================
 #
-(a) File descriptions:
+(a) Execution procedures:
+1. Run "generate_seedregions_package.m" to generate the seed regions.
+2. Run "main_phase3.ipynb". It outputs several immediate pickle files and three mat files. The users may ignore pickle files. Three mat files are the data prepared for the next phase 4. The three mat files are "results_of_original.mat", "results_of_combination.mat" and "results_of_removal.mat".
+3. Run "merge_seedregions_package.m" to get merging tables.
+4. Run "main_phase5.ipynb" to obtain the clustering results. It outputs "accu_history.csv" to evaluate the accuracy as well.
+#
+(b) File descriptions:
 1. "generate_seedregions_package.m"
 
     Function: the Matlab program of selecting seed regions from the data.
@@ -73,7 +79,7 @@
        MNIST_K200_bilabels_version2
 
 
-3. "phase3_three_predicted_results.ipynb"
+3. "main_phase3.ipynb"
 
    Function: the Python code for generating three CNN predicted results: "original," "combinational," and "removal," for the evaluation of four scores.
 
@@ -178,7 +184,7 @@
    
         MNIST_K200_mergedseedclasslabels_version2
 
-6. "phase5_merge_then_expand.ipynb"
+6. "main_phase5.ipynb"
 
     Function: the Python code for merging and expanding seed regions.
   
@@ -206,17 +212,7 @@
 
     Function: function call for the 1D CNN.
 
-8. "CNN_Modules.py"
-
-    Function: function call for the 2D CNN.
-   
-9. "functions.zip"
+8. "phase2and4.zip"
 
     Function: This is a zip file which includes accessory functions (.m files) and parameter values (.txt files) for "phase2_generate_seedregions_package.m" and "phase4_merge_seedregions_package.m". Please unzip this zip file into the same directory of "phase2_generate_seedregions_package.m" and "phase4_merge_seedregions_package.m".
 
-#
-(b) Execution procedures:
-1. Run "phase2_generate_seedregions_package.m" to generate the seed regions.
-2. Run "phase3_three_predicted_results.ipynb". It outputs several immediate pickle files and three mat files. The users may ignore pickle files. Three mat files are the data prepared for the next phase 4. The three mat files are "results_of_original.mat", "results_of_combination.mat" and "results_of_removal.mat".
-3. Run "phase4_merge_seedregions_package.m" to get merging tables.
-4. Run "phase5_merge_then_expand.ipynb" to obtain the clustering results. It outputs "accu_history.csv" to evaluate the accuracy as well.
