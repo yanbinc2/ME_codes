@@ -17,7 +17,7 @@
 
 1. "SpecClust.R"
 
-    Function: generate 200 clusters of the images by inputing pixel values or embeded data of the images.
+    Function: takes the input of 5000 X 3 of tSNE embedding values (or VGG16/ResNet18 embeddings in the case of CIFAR10 and other datasets) and outputs the result of clustering the images into 20 clusters.
 
     Inputs:
    
