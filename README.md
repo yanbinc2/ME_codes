@@ -1,18 +1,35 @@
 #==========================================================
 #### ME Algorithm, 2024
-#### Yan-Bin Chen (陳彥賓)  yanbin@ntu.edu.tw; Chen-Hsiang Yeang (楊振翔)   chyeang@stat.sinica.edu.tw; 	Khong Loon Tiong 	khongloontiong@gmail.com
+#### Yan-Bin Chen (陳彥賓)  yanbin@ntu.edu.tw; Chen-Hsiang Yeang (楊振翔)   chyeang@stat.sinica.edu.tw; 	Khong Loon Tiong (張孔綸)	khongloontiong@gmail.com
+#### Master Program in Statistics, National Taiwan University, Taipei, Taiwan.
 #### Institute of Statistical Science, Academia Sinica, Taipei, Taiwan.
 #### March, 2024
 #==========================================================
 #
 (a) Execution procedures:
-1. Run "generate_seedregions_package.m" to generate the seed regions.
-2. Run "main_phase3.ipynb". It outputs several immediate pickle files and three mat files. The users may ignore pickle files. Three mat files are the data prepared for the next phase 4. The three mat files are "results_of_original.mat", "results_of_combination.mat" and "results_of_removal.mat".
-3. Run "merge_seedregions_package.m" to get merging tables.
-4. Run "main_phase5.ipynb" to obtain the clustering results. It outputs "accu_history.csv" to evaluate the accuracy as well.
+1. Run "SpecClust.R" to generate the candidates seed regions.
+2. Run "generate_seedregions_package.m" to generate the seed regions.
+3. Run "main_phase3.ipynb". It outputs several immediate pickle files and three mat files. The users may ignore pickle files. Three mat files are the data prepared for the next phase 4. The three mat files are "results_of_original.mat", "results_of_combination.mat" and "results_of_removal.mat".
+4. Run "merge_seedregions_package.m" to get merging tables.
+5. Run "main_phase5.ipynb" to obtain the clustering results. It outputs "accu_history.csv" to evaluate the accuracy as well.
 #
 (b) File descriptions:
-1. "generate_seedregions_package.m"
+
+1. "SpecClust.R"
+
+    Function: generate 200 clusters of the images by inputing pixel values or embeded data of the images.
+
+    Inputs:
+   
+        "MNIST_Raw_Values.csv" - Grayscale pixel values of MNIST samples.
+   
+        "MNIST_Labels.csv" - Labels of MNIST samples
+   
+    Outputs:
+   
+        "MNIST_Labels_Spec10.csv" - Result of clustering appended as a new column to the original  "MNIST_Labels.csv" file.
+
+2. "generate_seedregions_package.m"
 
     Function: the Matlab program of selecting seed regions from the data.
    
@@ -184,7 +201,7 @@
    
         MNIST_K200_mergedseedclasslabels_version2
 
-6. "main_phase5.ipynb"
+5. "main_phase5.ipynb"
 
     Function: the Python code for merging and expanding seed regions.
   
@@ -208,11 +225,11 @@
   
     Outputs: output the accuracy tables.
 
-7. "CNN_Modules_1D.py"
+6. "CNN_Modules_1D.py"
 
     Function: function call for the 1D CNN.
 
-8. "phase2and4.zip"
+7. "phase2and4.zip"
 
     Function: This is a zip file which includes accessory functions (.m files) and parameter values (.txt files) for "phase2_generate_seedregions_package.m" and "phase4_merge_seedregions_package.m". Please unzip this zip file into the same directory of "phase2_generate_seedregions_package.m" and "phase4_merge_seedregions_package.m".
 
