@@ -89,11 +89,11 @@
   
     Outputs:
 
-       MNIST_K200_seedinds_version2
+       MNIST_seedinds.txt
 
-       MNIST_K200_seedinds_neighborregions_version2
+       MNIST_seedinds_neighborregions.txt
 
-       MNIST_K200_bilabels_version2
+       MNIST_bilabels.txt
 
 
 3. "main_phase3.ipynb"
@@ -102,19 +102,24 @@
 
    Inputs: following files specified by the path are the input data. The input files presented here are provided as examples for instructional guidance. Users can input their own data based on their applications.
    
-       PATH1='./Data/NCT_VGG16_K200_seedinds_version2_valid.txt'  -->  the seed regions ("seedinds") given by the phase 2. 
+       PATH1='../phase3_data/MNIST_seedinds.txt'  -->  the seed regions ("seedinds") given by the phase 2.
   
-       PATH2='./Data/NCT_VGG16_K200_bilabels_version2.txt'  --> the data file to indicate which labels ("bilabels") are effective given by phase 2.
+       PATH2='../phase3_data/MNIST_bilabels.txt'  --> the data file to indicate which labels ("bilabels") are effective given by phase 2.
   
-       PATH3='./Data/VGG16_CRC_100K_tSNE_Spec.csv'  --> the data file to specify the entire region indices.
-  
-       PATH4='./Data/NCT_VGG16_K200_neighborregions_version2_valid.txt'  --> to specify the neighboring regions of seed regions.
-  
-       PATH5='./Data/20230106_NCT_Vgg16_test_label.pickle'  --> the embedded data.
-
-       TRIALS: the number of trials for the CNN. Usually, set to 1.
+       PATH3='../phase3_data/MNIST_seedinds_neighborregions.txt'  --> to specify the neighboring regions of seed regions.
    
-       timestr: the prompt for the output file.
+       PATH4='../phase3_data/MNIST_Labels_Spec20.csv'  --> the seed region index.
+   
+       PATH5='../phase3_data/Small_MNIST_tSNE_embeddings.pickle'  --> the embedded data.
+  
+  
+       TRIALS:  --> the number of trials for the CNN. Usually, set to 1.
+   
+       timestr:  --> the prompt for the output file.
+
+       NUM_NEI:  --> number of neighbors.
+
+       REGION_INDEX_LOC:  --> column location for region index.
 
   
     Outputs: output three CNN predicted files for the four scores evaluation, as follows:
@@ -126,7 +131,7 @@
        results_of_removal.mat  --> the predicted results of removal CNN.
 
 
-4. "merge_seedregions_package.m"
+5. "merge_seedregions_package.m"
 
     Function: the Matlab program of merging seed regions according to three combinatorial classification outcomes (.mat files).
 
@@ -201,7 +206,7 @@
    
         MNIST_K200_mergedseedclasslabels_version2
 
-5. "main_phase5.ipynb"
+6. "main_phase5.ipynb"
 
     Function: the Python code for merging and expanding seed regions.
   
@@ -225,11 +230,11 @@
   
     Outputs: output the accuracy tables.
 
-6. "CNN_Modules_1D.py"
+7. "CNN_Modules_1D.py"
 
     Function: function call for the 1D CNN.
 
-7. "phase2and4.zip"
+8. "phase2and4.zip"
 
     Function: This is a zip file which includes accessory functions (.m files) and parameter values (.txt files) for "phase2_generate_seedregions_package.m" and "phase4_merge_seedregions_package.m". Please unzip this zip file into the same directory of "phase2_generate_seedregions_package.m" and "phase4_merge_seedregions_package.m".
 
