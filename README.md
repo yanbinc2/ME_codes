@@ -220,6 +220,7 @@
   
        PATH7='../phase3_data/region_for_phase5.pickle'  --> the initial conditions.
 
+
        NUM_CASE: to indicate how many cases in the merged seed regions outcomes.
    
        INTE_bool: the switch to specify the intergration netwrok mode or single network mode.
