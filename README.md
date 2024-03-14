@@ -210,31 +210,37 @@
 
     Function: the Python code for merging and expanding seed regions.
   
-    Inputs: the following files specified by the path are the input data. The input files presented here are provided as examples for instructional guidance. Users can input their own data based on their applications. 
+    Inputs: the following files specified by the path are the input data. The input files presented here are provided as examples for instructional guidance. Users can input their own data based on their applications.
 
-       PATH3='./Data/VGG16_CRC_100K_tSNE_Spec.csv'--> the data file to specify the entire region index.
+       PATH4='../phase3_data/MNIST_Labels_Spec20.csv'  --> the data file to specify the entire region index.
   
-       PATH5='./Data/20230106_NCT_Vgg16_test_label.pickle' --> the true labels for the accuracy evaluation.
+       PATH5='../phase3_data/Small_MNIST_tSNE_embeddings.pickle'  --> the true labels for the accuracy evaluation.
   
-       PATH6='./Data/NCT_VGG16_K200_mergedseedclasslabels_version2.txt' --> the merged results ("nmergeoutcomes" and "mergedclasslabels") given by the phase 4.
+       PATH6='../phase5_data/MNIST_mergedseedclasslabels.txt' --> the merged results ("nmergeoutcomes" and "mergedclasslabels") given by the phase 4.
   
-       PATH7='./Data/region_for_phaseIV.pickle'  --> the initial conditions.
+       PATH7='../phase3_data/region_for_phase5.pickle'  --> the initial conditions.
 
        NUM_CASE: to indicate how many cases in the merged seed regions outcomes.
-
-       DATASET: to specify the datasets.
    
        INTE_bool: the switch to specify the intergration netwrok mode or single network mode.
    
        ITE_FROM: the start point of the loop. This is for the special case or debugging.
+       
+       SAVE_bool: to save the results.
+
+       MNIST: for t-SNE embedded data in MNIST.
+
+       REGION_INDEX_LOC:  --> column location for region index.
   
     Outputs: output the accuracy tables.
+   
+       'accu_history.csv'  --> accuracy tables.
 
-7. "CNN_Modules_1D.py"
+8. "CNN_Modules_1D.py"
 
     Function: function call for the 1D CNN.
 
-8. "phase2and4.zip"
+9. "phase2and4.zip"
 
     Function: This is a zip file which includes accessory functions (.m files) and parameter values (.txt files) for "phase2_generate_seedregions_package.m" and "phase4_merge_seedregions_package.m". Please unzip this zip file into the same directory of "phase2_generate_seedregions_package.m" and "phase4_merge_seedregions_package.m".
 
