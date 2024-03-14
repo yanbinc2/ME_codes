@@ -21,13 +21,13 @@
 
     Inputs:
    
-        "MNIST_Raw_Values.csv" - Grayscale pixel values of MNIST samples.
+        "MNIST_tSNE_5000.csv" - tSNE embedding values of 5000 MNIST samples.
    
-        "MNIST_Labels.csv" - Labels of MNIST samples
+        "MNIST_Labels_5000.csv" - Labels of MNIST samples
    
     Outputs:
    
-        "MNIST_Labels_Spec10.csv" - Result of clustering appended as a new column to the original  "MNIST_Labels.csv" file.
+        "MNIST_Labels_Spec20.csv" - Result of clustering appended as a new column to the original  "MNIST_Labels_5000.csv" file.
 
 2. "generate_seedregions_package.m"
 
