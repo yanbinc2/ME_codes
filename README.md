@@ -235,7 +235,7 @@ Inputs: the following files specified by the path are the input data. The input 
   
     PATH5='../../phase3/data/Small_MNIST_tSNE_embeddings.pickle'  --> the true labels for the accuracy evaluation.
   
-    PATH6='../phase5_data/MNIST_mergedseedclasslabels.txt' --> the merged results ('nmergeoutcomes' and 'mergedclasslabels') given by the phase 4.
+    PATH6='../data/MNIST_mergedseedclasslabels.txt' --> the merged results ('nmergeoutcomes' and 'mergedclasslabels') given by the phase 4.
   
     PATH7='../../phase3/data/region_for_phase5.pickle'  --> the initial conditions.
 
