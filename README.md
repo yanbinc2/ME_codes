@@ -117,8 +117,6 @@
    
        timestr:  --> the prompt for the output file.
 
-       NUM_NEI:  --> number of neighbors.
-
        REGION_INDEX_LOC:  --> column location for region index.
 
   
