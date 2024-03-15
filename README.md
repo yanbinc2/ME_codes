@@ -231,13 +231,13 @@ Function: the Python code for merging and expanding seed regions.
 
 Inputs: the following files specified by the path are the input data. The input files presented here are provided as examples for instructional guidance. Users can input their own data based on their applications.
     
-    PATH4='../phase3_data/MNIST_Labels_Spec20.csv'  --> the data file to specify the entire region index.
+    PATH4='../../phase3/data/MNIST_Labels_Spec20.csv'  --> the data file to specify the entire region index.
   
-    PATH5='../phase3_data/Small_MNIST_tSNE_embeddings.pickle'  --> the true labels for the accuracy evaluation.
+    PATH5='../../phase3/data/Small_MNIST_tSNE_embeddings.pickle'  --> the true labels for the accuracy evaluation.
   
     PATH6='../phase5_data/MNIST_mergedseedclasslabels.txt' --> the merged results ('nmergeoutcomes' and 'mergedclasslabels') given by the phase 4.
   
-    PATH7='../phase3_data/region_for_phase5.pickle'  --> the initial conditions.
+    PATH7='../../phase3/data/region_for_phase5.pickle'  --> the initial conditions.
 
 
     NUM_CASE: to indicate how many cases in the merged seed regions outcomes.
