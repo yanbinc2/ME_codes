@@ -275,7 +275,7 @@ Outputs: output the accuracy tables.
 
 #
 (c) Execution procedures:
-1. Phase1. Run 'SpecClust.R' to generate the candidates seed regions. It outputs one file, shown in the following section.
+1. Phase1. Run 'SpecClust.R' to generate the candidates seed regions. It outputs one file in phase1/data/.
 2. Phase2. Copy two output files from phase1 into the phase2/data/. The hyperparameter file 'MNIST_generate_seedregions_params.txt' has been stored in phase2/data/. Run 'generate_seedregions_package.m'. It will output three files.
 3. Phase 3. Copy three output files from phase2 into the phase3/data/. Run 'main_phase3.ipynb'. It will output several immediate pickle files and three mat files. The users may ignore pickle files. Three mat files are the data prepared for the next phase 4. The three mat files 'results_of_original.mat', 'results_of_combination.mat' and 'results_of_removal.mat' will locate in the phase3/codes/.
 4. Phase 4. Copy three output files from phase3 into the phase4/data/. The hyperparameter file 'MNIST_merge_seedregions_params.txt' has been stored in phase4/data/. Run 'merge_seedregions_package.m'. It will output one file.
