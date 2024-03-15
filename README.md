@@ -43,7 +43,7 @@ We provide a toy dataset, which is a subset of MNIST, for the user to experience
 #
 (b) File descriptions:
 
-1.Phase1:
+1.Phase1 (R language):
 
 'SpecClust.R'
 
@@ -59,7 +59,7 @@ Outputs:
    
     'MNIST_Labels_Spec20.csv' - Result of clustering appended as a new column to the original  'MNIST_Labels_5000.csv' file.
 
-2.Phase2:
+2.Phase2 (Matlab):
 
 'generate_seedregions_package.m'
 
@@ -128,7 +128,7 @@ Outputs:
     'MNIST_bilabels.txt'
 
 
-3.Phase3
+3.Phase3 (Python):
 
 'main_phase3.ipynb'
 
@@ -163,7 +163,7 @@ Outputs: output three CNN predicted files for the four scores evaluation, as fol
     'results_of_removal.mat'  --> the predicted results of removal CNN.
 
 
-4.Phase4:
+4.Phase4 (Matlab):
 
 'merge_seedregions_package.m'
 
@@ -240,7 +240,7 @@ Outputs:
    
     'MNIST_mergedseedclasslabels.txt'
 
-5.Phase5:
+5.Phase5 (Python):
 
 'main_phase5.ipynb'
 
