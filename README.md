@@ -285,8 +285,8 @@ Outputs: output the accuracy tables.
 
 #
 (c) Execution procedures:
-1. Run 'SpecClust.R' to generate the candidates seed regions. It outputs one file, shown in the following section.
-2. Copy two output files from phase2 into the phase2and4/data/. Hyperparameter 'MNIST_generate_seedregions_params.txt' is in phase2and4/data/ already. Run 'generate_seedregions_package.m' to generate the seed regions. It outputs three files, shown in the following section.
-3. Copy three output files from phase2 into the phase3/data/. Run 'main_phase3.ipynb'. It outputs several immediate pickle files and three mat files. The users may ignore pickle files. Three mat files are the data prepared for the next phase 4. The three mat files are 'results_of_original.mat', 'results_of_combination.mat' and 'results_of_removal.mat'.
-4. Copy three output files from phase3 into the phase2and4/data/. Hyperparameter 'MNIST_merge_seedregions_params.txt' is in phase2and4/data/ already. Run 'merge_seedregions_package.m' to get merging tables. It outputs one file, shown in the following section.
-5. Copy one output file from phase4 into the phase5/data/. Run 'main_phase5.ipynb' to obtain the clustering results. It outputs 'accu_history.csv' to evaluate the accuracy as well.
+1. Phase1. Run 'SpecClust.R' to generate the candidates seed regions. It outputs one file, shown in the following section.
+2. Phase2. Copy two output files from phase1 into the phase2/data/. Hyperparameter 'MNIST_generate_seedregions_params.txt' has been stored in phase2/data/. Run 'generate_seedregions_package.m' to generate the seed regions. It will output three files.
+3. Phase 3. Copy three output files from phase2 into the phase3/data/. Run 'main_phase3.ipynb'. It will output several immediate pickle files and three mat files. The users may ignore pickle files. Three mat files are the data prepared for the next phase 4. The three mat files 'results_of_original.mat', 'results_of_combination.mat' and 'results_of_removal.mat' will locate in the phase3/codes/.
+4. Copy three output files from phase3 into the phase4/data/. Hyperparameter 'MNIST_merge_seedregions_params.txt' hass been in phase4/data/. Run 'merge_seedregions_package.m'. It will output one file.
+5. Copy one output file from phase4 into the phase5/data/. Run 'main_phase5.ipynb' to obtain the clustering results. It outputs 'accu_history.csv' in the phase5/codes/ to evaluate the accuracy.
