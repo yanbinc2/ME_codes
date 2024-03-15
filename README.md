@@ -8,9 +8,9 @@
 #
 (a) Execution procedures:
 1. Run "SpecClust.R" to generate the candidates seed regions. It outputs one file, shown in the following section.
-2. Run "generate_seedregions_package.m" to generate the seed regions. It outputs three files, shown in the following section.
+2. Copy two output files from phase2 into the phase2and4/data/. Hyperparameter "MNIST_generate_seedregions_params.txt" is in phase2and4/data/ already. Run "generate_seedregions_package.m" to generate the seed regions. It outputs three files, shown in the following section.
 3. Copy three output files from phase2 into the phase3/data/. Run "main_phase3.ipynb". It outputs several immediate pickle files and three mat files. The users may ignore pickle files. Three mat files are the data prepared for the next phase 4. The three mat files are "results_of_original.mat", "results_of_combination.mat" and "results_of_removal.mat".
-4. Run "merge_seedregions_package.m" to get merging tables. It outputs one file, shown in the following section.
+4. Copy three output files from phase3 into the phase2and4/data/. Hyperparameter "MNIST_merge_seedregions_params.txt" is in phase2and4/data/ already. Run "merge_seedregions_package.m" to get merging tables. It outputs one file, shown in the following section.
 5. Copy one output file from phase4 into the phase5/data/. Run "main_phase5.ipynb" to obtain the clustering results. It outputs "accu_history.csv" to evaluate the accuracy as well.
 #
 (b) File descriptions:
