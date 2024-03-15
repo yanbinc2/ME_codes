@@ -1,14 +1,25 @@
 #==========================================================
 #### ME Algorithm, 2024
-#### Yan-Bin Chen (陳彥賓)  yanbin@ntu.edu.tw; Chen-Hsiang Yeang (楊振翔)   chyeang@stat.sinica.edu.tw; 	Khong Loon Tiong (張孔綸)	khongloontiong@gmail.com
+#### Yan-Bin Chen (陳彥賓) yanbin@ntu.edu.tw; &ebsp Khong Loon Tiong (張孔綸) khongloontiong@gmail.com; Chen-Hsiang Yeang (楊振翔) chyeang@stat.sinica.edu.tw
 #### Master Program in Statistics, National Taiwan University, Taipei, Taiwan.
 #### Institute of Statistical Science, Academia Sinica, Taipei, Taiwan.
 #### March, 2024
 #==========================================================
 #
 (a) Abstract:
+
 structure
+
 hardware and software
+Software:
+
+R 4.1.1
+
+RStudio
+
+R Package: 
+
+kknn
 
 #
 (b) File descriptions:
