@@ -34,16 +34,6 @@ The ME files deployed here follow the following tree structure.
 
                     └── files
           
-          └── phase3
-          
-               └── codes
-
-                    └── files
-               
-               └── data
-
-                    └── files
-          
           └── ...more
 
 
