@@ -215,33 +215,33 @@ Outputs:
 'main_phase5.ipynb'
 
 Function: the Python code for merging and expanding seed regions.
-  
+
 Inputs: the following files specified by the path are the input data. The input files presented here are provided as examples for instructional guidance. Users can input their own data based on their applications.
-
-   PATH4='../phase3_data/MNIST_Labels_Spec20.csv'  --> the data file to specify the entire region index.
+    
+    PATH4='../phase3_data/MNIST_Labels_Spec20.csv'  --> the data file to specify the entire region index.
   
-   PATH5='../phase3_data/Small_MNIST_tSNE_embeddings.pickle'  --> the true labels for the accuracy evaluation.
+    PATH5='../phase3_data/Small_MNIST_tSNE_embeddings.pickle'  --> the true labels for the accuracy evaluation.
   
-   PATH6='../phase5_data/MNIST_mergedseedclasslabels.txt' --> the merged results ('nmergeoutcomes' and 'mergedclasslabels') given by the phase 4.
+    PATH6='../phase5_data/MNIST_mergedseedclasslabels.txt' --> the merged results ('nmergeoutcomes' and 'mergedclasslabels') given by the phase 4.
   
-   PATH7='../phase3_data/region_for_phase5.pickle'  --> the initial conditions.
+    PATH7='../phase3_data/region_for_phase5.pickle'  --> the initial conditions.
 
 
-   NUM_CASE: to indicate how many cases in the merged seed regions outcomes.
+    NUM_CASE: to indicate how many cases in the merged seed regions outcomes.
    
-   INTE_bool: the switch to specify the intergration netwrok mode or single network mode.
+    INTE_bool: the switch to specify the intergration netwrok mode or single network mode.
    
-   ITE_FROM: the start point of the loop. This is for the special case or debugging.
+    ITE_FROM: the start point of the loop. This is for the special case or debugging.
        
-   SAVE_bool: to save the results.
+    SAVE_bool: to save the results.
 
-   MNIST: for t-SNE embedded data in MNIST.
+    MNIST: for t-SNE embedded data in MNIST.
 
-   REGION_INDEX_LOC:  --> column location for region index.
+    REGION_INDEX_LOC:  --> column location for region index.
   
 Outputs: output the accuracy tables.
-   
-   'accu_history.csv'  --> accuracy tables.
+
+    'accu_history.csv'  --> accuracy tables.
 
 #
 (c) Execution procedures:
