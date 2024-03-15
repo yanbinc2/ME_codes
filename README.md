@@ -27,11 +27,11 @@ Inputs:
    
 Outputs:
    
-    'MNIST_Labels_Spec20.csv' - Result of clustering appended as a new column to the original  "MNIST_Labels_5000.csv" file.
+    'MNIST_Labels_Spec20.csv' - Result of clustering appended as a new column to the original  'MNIST_Labels_5000.csv' file.
 
 2.Phase2:
 
-"generate_seedregions_package.m"
+'generate_seedregions_package.m'
 
 Function: the Matlab program of selecting seed regions from the data.
    
@@ -100,15 +100,15 @@ Outputs:
 
 3.Phase3
 
-"main_phase3.ipynb"
+'main_phase3.ipynb'
 
-Function: the Python code for generating three CNN predicted results: "original," "combinational," and "removal," for the evaluation of four scores.
+Function: the Python code for generating three CNN predicted results: 'original,' 'combinational,' and 'removal,' for the evaluation of four scores.
 
 Inputs: following files specified by the path are the input data. The input files presented here are provided as examples for instructional guidance. Users can input their own data based on their applications.
    
-    PATH1='../phase3_data/MNIST_seedinds.txt'  -->  the seed regions ("seedinds") given by the phase 2.
+    PATH1='../phase3_data/MNIST_seedinds.txt'  -->  the seed regions ('seedinds') given by the phase 2.
   
-    PATH2='../phase3_data/MNIST_bilabels.txt'  --> the data file to indicate which labels ("bilabels") are effective given by phase 2.
+    PATH2='../phase3_data/MNIST_bilabels.txt'  --> the data file to indicate which labels ('bilabels') are effective given by phase 2.
   
     PATH3='../phase3_data/MNIST_seedinds_neighborregions.txt'  --> to specify the neighboring regions of seed regions.
    
@@ -135,7 +135,7 @@ Outputs: output three CNN predicted files for the four scores evaluation, as fol
 
 4.Phase4:
 
-"merge_seedregions_package.m"
+'merge_seedregions_package.m'
 
 Function: the Matlab program of merging seed regions according to three combinatorial classification outcomes (.mat files).
 
@@ -212,7 +212,7 @@ Outputs:
 
 5.Phase5:
 
-"main_phase5.ipynb"
+'main_phase5.ipynb'
 
 Function: the Python code for merging and expanding seed regions.
   
@@ -222,7 +222,7 @@ Inputs: the following files specified by the path are the input data. The input 
   
    PATH5='../phase3_data/Small_MNIST_tSNE_embeddings.pickle'  --> the true labels for the accuracy evaluation.
   
-   PATH6='../phase5_data/MNIST_mergedseedclasslabels.txt' --> the merged results ("nmergeoutcomes" and "mergedclasslabels") given by the phase 4.
+   PATH6='../phase5_data/MNIST_mergedseedclasslabels.txt' --> the merged results ('nmergeoutcomes' and 'mergedclasslabels') given by the phase 4.
   
    PATH7='../phase3_data/region_for_phase5.pickle'  --> the initial conditions.
 
@@ -245,8 +245,8 @@ Outputs: output the accuracy tables.
 
 #
 (c) Execution procedures:
-1. Run "SpecClust.R" to generate the candidates seed regions. It outputs one file, shown in the following section.
-2. Copy two output files from phase2 into the phase2and4/data/. Hyperparameter "MNIST_generate_seedregions_params.txt" is in phase2and4/data/ already. Run "generate_seedregions_package.m" to generate the seed regions. It outputs three files, shown in the following section.
-3. Copy three output files from phase2 into the phase3/data/. Run "main_phase3.ipynb". It outputs several immediate pickle files and three mat files. The users may ignore pickle files. Three mat files are the data prepared for the next phase 4. The three mat files are "results_of_original.mat", "results_of_combination.mat" and "results_of_removal.mat".
-4. Copy three output files from phase3 into the phase2and4/data/. Hyperparameter "MNIST_merge_seedregions_params.txt" is in phase2and4/data/ already. Run "merge_seedregions_package.m" to get merging tables. It outputs one file, shown in the following section.
-5. Copy one output file from phase4 into the phase5/data/. Run "main_phase5.ipynb" to obtain the clustering results. It outputs "accu_history.csv" to evaluate the accuracy as well.
+1. Run 'SpecClust.R' to generate the candidates seed regions. It outputs one file, shown in the following section.
+2. Copy two output files from phase2 into the phase2and4/data/. Hyperparameter 'MNIST_generate_seedregions_params.txt' is in phase2and4/data/ already. Run 'generate_seedregions_package.m' to generate the seed regions. It outputs three files, shown in the following section.
+3. Copy three output files from phase2 into the phase3/data/. Run 'main_phase3.ipynb'. It outputs several immediate pickle files and three mat files. The users may ignore pickle files. Three mat files are the data prepared for the next phase 4. The three mat files are 'results_of_original.mat', 'results_of_combination.mat' and 'results_of_removal.mat'.
+4. Copy three output files from phase3 into the phase2and4/data/. Hyperparameter 'MNIST_merge_seedregions_params.txt' is in phase2and4/data/ already. Run 'merge_seedregions_package.m' to get merging tables. It outputs one file, shown in the following section.
+5. Copy one output file from phase4 into the phase5/data/. Run 'main_phase5.ipynb' to obtain the clustering results. It outputs 'accu_history.csv' to evaluate the accuracy as well.
