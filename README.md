@@ -10,7 +10,7 @@
 #
 (a) Abstract:
 
-The ME files deployed here follows following tree structure.
+The ME files deployed here follow following the tree structure.
 
           main
           
@@ -48,12 +48,9 @@ The ME files deployed here follows following tree structure.
 
 
 
-hardware and software
-Software:
-
-R 4.1.1
-
-RStudio
+We provide a toy dataset which is the subset of MNIST to experience the ME algorithm. It is the embedded dataset named "MNIST_tSNE_5000.csv" and put in the phase1/data/.
+The hardware we used is Intel ®Xeon®CPU E5-2667 v4 3.20 GHz, 256 GB RAM, and NVIDIA GPU Quadro P4000.
+Softwares are R 4.1.1, RStudio, Python 3.7.9, tensorflow 2.1.0, and Matlab 9.10.0 (R2021a)
 
 R Package: 
 
