@@ -10,17 +10,43 @@
 #
 (a) Abstract:
 
-structure
+The ME files deployed here follows following tree structure.
 
-main
+          main
+          
+          └── phase1
+          
+               └── codes
 
-└── phase1
+                    └── files
+               
+               └── data
 
-     └── codes
-    
-    └── data
-    
-└── phase2
+                    └── files
+              
+          └── phase2
+          
+               └── codes
+
+                    └── files
+               
+               └── data
+
+                    └── files
+          
+          └── phase3
+          
+               └── codes
+
+                    └── files
+               
+               └── data
+
+                    └── files
+          
+          └── ...more
+
+
 
 hardware and software
 Software:
