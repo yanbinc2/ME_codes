@@ -119,15 +119,15 @@ Function: the Python code for generating three CNN predicted results: 'original,
 
 Inputs: following files specified by the path are the input data. The input files presented here are provided as examples for instructional guidance. Users can input their own data based on their applications.
    
-    PATH1='../phase3_data/MNIST_seedinds.txt'  -->  the seed regions ('seedinds') given by the phase 2.
+    PATH1='../data/MNIST_seedinds.txt'  -->  the seed regions ('seedinds') given by the phase 2.
   
-    PATH2='../phase3_data/MNIST_bilabels.txt'  --> the data file to indicate which labels ('bilabels') are effective given by phase 2.
+    PATH2='../data/MNIST_bilabels.txt'  --> the data file to indicate which labels ('bilabels') are effective given by phase 2.
   
-    PATH3='../phase3_data/MNIST_seedinds_neighborregions.txt'  --> to specify the neighboring regions of seed regions.
+    PATH3='../data/MNIST_seedinds_neighborregions.txt'  --> to specify the neighboring regions of seed regions.
    
-    PATH4='../phase3_data/MNIST_Labels_Spec20.csv'  --> the seed region index.
+    PATH4='../data/MNIST_Labels_Spec20.csv'  --> the seed region index.
    
-    PATH5='../phase3_data/Small_MNIST_tSNE_embeddings.pickle'  --> the embedded data.
+    PATH5='../data/Small_MNIST_tSNE_embeddings.pickle'  --> the embedded data.
   
   
     TRIALS:  --> the number of trials for the CNN. Usually, set to 1.
