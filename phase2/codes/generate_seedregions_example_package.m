@@ -7,14 +7,14 @@
 clear;
 
 % directory='/mnt/sdb/NN/package_version4/data/';
-directory='./data/';
+directory='../data/';
 
 
 % Load MNIST data and spectral cluster labels.
 
 %clustersfilename=sprintf('%sMNIST_SpectralLabel.csv',directory);
-%clustersfilename=sprintf('%sMNIST_Labels_Spec20.csv',directory);
-clustersfilename=sprintf('%sMNIST_Labels_5000.csv',directory);
+clustersfilename=sprintf('%sMNIST_Labels_Spec20.csv',directory);
+%clustersfilename=sprintf('%sMNIST_Labels_5000.csv',directory);
 
 
 % Load t-SNE projection data.
@@ -23,7 +23,6 @@ datafilename=sprintf('%sMNIST_tSNE_5000.csv',directory);
 augdatafileinfoname='dummy';
 
 % The parameter values are storted in a file.
-
 parametersfilename=sprintf('%sMNIST_generate_seedregions_params.txt',directory);
 
 
@@ -42,7 +41,7 @@ data=NaN*ones(nimages,ndim);
 for i=1:ndim
  data(:,i)=transpose(cells{i});
 end
-
+tsnedata=data;
 
 % Load the augmented data if the file exists.
 filename=sprintf('%s',augdatafileinfoname);
@@ -82,17 +81,16 @@ else
  end
 end
 
-
 % Load cluster labels of data points.
 % Also load the true labels of data points.
 % Find dominant class labels of regions.
 filename=sprintf('%s',clustersfilename);
 fp=fopen(filename,'r');
-form=['%s','%d','%s'];
+form=['%f','%f','%f','%d','%d'];
 de=sprintf(',');
 cells=textscan(fp,form,'Delimiter',de,'Headerlines',1,'TreatAsEmpty',{'NA','na'});
 fclose(fp);
-regionneighborlabels=cells{2};
+regionneighborlabels=cells{5};
 regionneighborlabels=transpose(regionneighborlabels);
 nregions=max(regionneighborlabels);
 
@@ -101,8 +99,8 @@ nregions=max(regionneighborlabels);
 imagelabels=zeros(1,nimages);
 ulabels={}; nulabels=0;
 for n=1:nimages
- str=cells{3}{n};
- str=str(2:(length(str)-1));
+ l=cells{4}(n);
+ str=sprintf('%s',l);
  [a,b]=ismember(str,ulabels);
  if (b<=0)
   nulabels=nulabels+1;
@@ -153,9 +151,9 @@ diffratiothre=params(26);
 
 % Run generate_seedregions_package.m.
 
-tic;
+%tic;
 [nseeds,seedinds,bilabels,regionpairD,nbregioninds]=generate_seedregions_package(data,augdata,tsnedata,regionneighborlabels,filter,numthre,fracthre,topthre,nimagesthre,mthre,lwdthre,uppthre,nmarkersthre,rankthre,rankratiothre,overlapthre,sizethre,disparitythre,highthre,dthre,nnbsthre,sharedthre,nvalidnbsthre,rthre,regionpairDmode,maxnseeds,nclassesthre,ratiothre,foldthre,diffratiothre);
-toc;
+%toc;
 
 
 % The seed indices and bilabels are stored in output files.

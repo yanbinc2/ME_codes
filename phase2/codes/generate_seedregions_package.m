@@ -958,7 +958,7 @@ for m=1:nseeds
  subset=[n]; i=2;
  while ((i<=nregions)&(length(subset)<(nnbs+1)))
   j=I(i);
-  if ((validregions(j)==1)&(ismember(j,seedinds)==0))
+  if (validregions(j)==1)
    subset=[subset j];
   end
   i=i+1;
