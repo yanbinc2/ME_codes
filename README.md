@@ -12,6 +12,12 @@
 
 structure
 
+main
+└── phase1
+    └── codes
+    └── data
+└── phase2
+
 hardware and software
 Software:
 
