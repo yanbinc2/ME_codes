@@ -10,7 +10,7 @@
 #
 (a) Abstract:
 
-The ME files deployed here follow the following tree structure.
+The ME five phases deployed here follow the following tree structure.
 
           main
           
