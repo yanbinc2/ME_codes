@@ -15,19 +15,19 @@ hardware and software
 
 1.Phase1:
 
-"SpecClust.R"
+'SpecClust.R'
 
 Function: takes the input of 5000 X 3 of tSNE embedding values (or VGG16/ResNet18 embeddings in the case of CIFAR10 and other datasets) and outputs the result of clustering the images into 20 clusters.
 
 Inputs:
    
-    "MNIST_tSNE_5000.csv" - tSNE embedding values of 5000 MNIST samples.
+    'MNIST_tSNE_5000.csv' - tSNE embedding values of 5000 MNIST samples.
    
-    "MNIST_Labels_5000.csv" - Labels of MNIST samples
+    'MNIST_Labels_5000.csv' - Labels of MNIST samples
    
 Outputs:
    
-    "MNIST_Labels_Spec20.csv" - Result of clustering appended as a new column to the original  "MNIST_Labels_5000.csv" file.
+    'MNIST_Labels_Spec20.csv' - Result of clustering appended as a new column to the original  "MNIST_Labels_5000.csv" file.
 
 2.Phase2:
 
@@ -91,11 +91,11 @@ Inputs: Details for each parameter are described as follows.
   
 Outputs:
 
-    MNIST_seedinds.txt
+    'MNIST_seedinds.txt'
 
-    MNIST_seedinds_neighborregions.txt
+    'MNIST_seedinds_neighborregions.txt'
 
-    MNIST_bilabels.txt
+    'MNIST_bilabels.txt'
 
 
 3.Phase3
@@ -126,11 +126,11 @@ Inputs: following files specified by the path are the input data. The input file
   
 Outputs: output three CNN predicted files for the four scores evaluation, as follows:
    
-    results_of_original.mat  --> the predicted results of original CNN.
+    'results_of_original.mat'  --> the predicted results of original CNN.
 
-    results_of_combination.mat  --> the predicted results of combinatorial CNN. 
+    'results_of_combination.mat'  --> the predicted results of combinatorial CNN. 
 
-    results_of_removal.mat  --> the predicted results of removal CNN.
+    'results_of_removal.mat'  --> the predicted results of removal CNN.
 
 
 4.Phase4:
@@ -208,38 +208,40 @@ Inputs: information about regions and seed regions, prediction outcomes, and thr
 
 Outputs:
    
-    MNIST_K200_mergedseedclasslabels_version2
+    'MNIST_mergedseedclasslabels.txt'
 
-7. "main_phase5.ipynb"
+5.Phase5:
 
-    Function: the Python code for merging and expanding seed regions.
+"main_phase5.ipynb"
+
+Function: the Python code for merging and expanding seed regions.
   
-    Inputs: the following files specified by the path are the input data. The input files presented here are provided as examples for instructional guidance. Users can input their own data based on their applications.
+Inputs: the following files specified by the path are the input data. The input files presented here are provided as examples for instructional guidance. Users can input their own data based on their applications.
 
-       PATH4='../phase3_data/MNIST_Labels_Spec20.csv'  --> the data file to specify the entire region index.
+   PATH4='../phase3_data/MNIST_Labels_Spec20.csv'  --> the data file to specify the entire region index.
   
-       PATH5='../phase3_data/Small_MNIST_tSNE_embeddings.pickle'  --> the true labels for the accuracy evaluation.
+   PATH5='../phase3_data/Small_MNIST_tSNE_embeddings.pickle'  --> the true labels for the accuracy evaluation.
   
-       PATH6='../phase5_data/MNIST_mergedseedclasslabels.txt' --> the merged results ("nmergeoutcomes" and "mergedclasslabels") given by the phase 4.
+   PATH6='../phase5_data/MNIST_mergedseedclasslabels.txt' --> the merged results ("nmergeoutcomes" and "mergedclasslabels") given by the phase 4.
   
-       PATH7='../phase3_data/region_for_phase5.pickle'  --> the initial conditions.
+   PATH7='../phase3_data/region_for_phase5.pickle'  --> the initial conditions.
 
 
-       NUM_CASE: to indicate how many cases in the merged seed regions outcomes.
+   NUM_CASE: to indicate how many cases in the merged seed regions outcomes.
    
-       INTE_bool: the switch to specify the intergration netwrok mode or single network mode.
+   INTE_bool: the switch to specify the intergration netwrok mode or single network mode.
    
-       ITE_FROM: the start point of the loop. This is for the special case or debugging.
+   ITE_FROM: the start point of the loop. This is for the special case or debugging.
        
-       SAVE_bool: to save the results.
+   SAVE_bool: to save the results.
 
-       MNIST: for t-SNE embedded data in MNIST.
+   MNIST: for t-SNE embedded data in MNIST.
 
-       REGION_INDEX_LOC:  --> column location for region index.
+   REGION_INDEX_LOC:  --> column location for region index.
   
-    Outputs: output the accuracy tables.
+Outputs: output the accuracy tables.
    
-       'accu_history.csv'  --> accuracy tables.
+   'accu_history.csv'  --> accuracy tables.
 
 #
 (c) Execution procedures:
