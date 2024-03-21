@@ -59,9 +59,6 @@ Inputs:
 
     "ResNet18_PlantDisease_45K_Labels" - Labels of PlantVillage samples
 
-    "VGG16_PlantDisease_45K_Values" - VGG16 embedding values of PlantVillage samples.
-
-    "VGG16_PlantDisease_45K_Labels" - Labels of PlantVillage samples
 
 Outputs:
 
