@@ -49,7 +49,7 @@ Since the file size limits, we provide the website to download the dataset. http
 
 'SpecClust.R'
 
-Function: SpecClust.R takes the input of 43127 X 1000 of ResNet18/VGG16 embeddings and outputs the result of clustering the images into 200 clusters.
+Function: SpecClust.R takes the input of 43127 X 1000 of ResNet18 embeddings and outputs the result of clustering the images into 200 clusters.
 
 
 Inputs:
