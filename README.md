@@ -49,17 +49,24 @@ Since the file size limits, we provide the website to download the dataset. http
 
 'SpecClust.R'
 
-Function: takes the input of 5000 X 3 of tSNE embedding values (or VGG16/ResNet18 embeddings in the case of CIFAR10 and other datasets) and outputs the result of clustering the images into 20 clusters.
+Function: SpecClust.R takes the input of 43127 X 1000 of ResNet18/VGG16 embeddings and outputs the result of clustering the images into 200 clusters.
+
 
 Inputs:
    
-    'MNIST_tSNE_5000.csv' - tSNE embedding values of 5000 MNIST samples.
-   
-    'MNIST_Labels_5000.csv' - Labels of MNIST samples
-   
+
+    "ResNet18_PlantDisease_45K_Values" - ResNet18 embedding values of PlantVillage samples.
+
+    "ResNet18_PlantDisease_45K_Labels" - Labels of PlantVillage samples
+
+    "VGG16_PlantDisease_45K_Values" - VGG16 embedding values of PlantVillage samples.
+
+    "VGG16_PlantDisease_45K_Labels" - Labels of PlantVillage samples
+
 Outputs:
+
+    "ResNet18_PlantDisease_45K_Spec200" - Result of clustering appended as a new column to the original  "ResNet18_PlantDisease_45K_Labels" file.
    
-    'MNIST_Labels_Spec20.csv' - Result of clustering appended as a new column to the original  'MNIST_Labels_5000.csv' file.
 
 2.Phase2 (Matlab):
 
