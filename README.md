@@ -40,7 +40,7 @@ The ME five phases deployed here follow the following tree structure.
 
 We provide a toy dataset, which is a subset of MNIST, for the user to experience the ME algorithm. It is the embedded dataset named "MNIST_tSNE_5000.csv" and is located in the phase1/data/ directory. We experimented with the ME algorithm on hardware consisting of an Intel® Xeon® CPU E5-2667 v4 3.20 GHz, 256 GB RAM, and an NVIDIA GPU Quadro P4000. The software we applied includes R 4.1.1, RStudio, kknn of R Package , Python 3.7.9, TensorFlow 2.1.0, and Matlab 9.10.0 (R2021a).
 
-The example dataset is too huge to put into the github. We provide the website to download it. https://staff.stat.sinica.edu.tw/chyeang/ME/PlantDisease_embeddings.zip
+Since the file size limits, we provide the website to download the dataset. https://staff.stat.sinica.edu.tw/chyeang/ME/PlantDisease_embeddings.zip
 
 #
 (b) File descriptions:
