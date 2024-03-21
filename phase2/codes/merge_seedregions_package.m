@@ -26,7 +26,7 @@
 % (4) Include singleton regions in clustering, but treat them as single classes afterward.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-function [nmergeoutcomes, mergedclasslabels] = merge_seedregions_package(nseeds, seedinds, result_for_original, prob_for_original, combination_pairs, result_for_merge, result_for_removal, data, regiontraininglabels, confusionratiothre, usemarker, nprednumthre, pvalthre, ntoprankthre, importthre, quantilethre, cocontributionthre, replacementratiothre, localranksumpvalthre, sizethre, smallclustersizethre, jumpfoldthre, gapfoldthre, smallratiothre, pdiffthre, medvalthre, ninformativemarkersthre, ninformativemarkersthre2, pdiffthre2, cntdiffthre, reducedrankscorethre)  
+function [nmergeoutcomes, mergedclasslabels] = merge_seedregions_package2(nseeds, seedinds, result_for_original, prob_for_original, combination_pairs, result_for_merge, result_for_removal, data, regiontraininglabels, confusionratiothre, usemarker, nprednumthre, pvalthre, ntoprankthre, importthre, quantilethre, cocontributionthre, replacementratiothre, localranksumpvalthre, sizethre, smallclustersizethre, jumpfoldthre, gapfoldthre, smallratiothre, pdiffthre, medvalthre, ninformativemarkersthre, ninformativemarkersthre2, pdiffthre2, cntdiffthre, reducedrankscorethre)  
 
 
 
@@ -62,6 +62,9 @@ end
 consensuslabels=consensuslabels+1;
 
 freqthre=ntrials;
+
+%freqthre=3;
+
 validpredictions=zeros(1,nimages);
 validpredictions(find(consensusfreqs>=freqthre))=1;
 
@@ -497,9 +500,25 @@ while (flag==1)
   end
  end
 
+ % Debug
+ %for i=1:nseeds
+ % fprintf('%d ',slabels(i));
+ %end
+ %fprintf('\n');
+
  if (length(linds)>0)
 
   i=linds(1); ss=find(slabels==i);   
+
+  ss=ss(find(discard(ss)==0));
+
+  % Debug
+  %fprintf('i=%d, ss=',i);
+  %for ii=1:length(ss)
+  % fprintf('%d ',ss(ii));
+  %end
+  %fprintf('\n');
+
   sW=W(ss,ss);
   tmpvec=sum(sW); sD=diag(tmpvec);
   sE=inv(sqrt(sD));
@@ -700,14 +719,15 @@ while (flag==1)
 
   if (sum(forcedpairconsistent==0)>0)
 
-   sel=zeros(1,nseeds);
+   sel=zeros(1,nseeds); 
    for j=1:nforcedpairs
     j1=forcedpairs(j,1); j2=forcedpairs(j,2);
     if (forcedpairconsistent(j)==0)
      sel(j1)=1; sel(j2)=1;
     end
    end
-  
+   sel(find(discard==1))=0;  
+
    selinds=find(sel==1); nsel=length(selinds);
    configs=zeros(1,nsel); nconfigs=0; vec=zeros(1,nsel); flag2=1;
    while (flag2==1)
