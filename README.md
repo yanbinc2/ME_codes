@@ -244,7 +244,7 @@ Inputs: information about regions and seed regions, prediction outcomes, and thr
 
 Outputs:
    
-    'MNIST_mergedseedclasslabels.txt'
+    'Plant_mergedseedclasslabels.txt'
 
 5.Phase5 (Python):
 
@@ -254,11 +254,11 @@ Function: the Python code for merging and expanding seed regions.
 
 Inputs: the following files specified by the path are the input data. The input files presented here are provided as examples for instructional guidance. Users can input their own data based on their applications.
     
-    PATH4='../../phase3/data/MNIST_Labels_Spec20.csv'  --> the data file to specify the entire region index.
+    PATH4='../../phase3/data/ResNet18_PlantDisease_45K_Labels.csv'  --> the data file to specify the entire region index.
   
-    PATH5='../../phase3/data/Small_MNIST_tSNE_embeddings.pickle'  --> the true labels for the accuracy evaluation.
+    PATH5='../../phase3/data/Plant_embeddings.pickle'  --> the true labels for the accuracy evaluation.
   
-    PATH6='../data/MNIST_mergedseedclasslabels.txt' --> the merged results ('nmergeoutcomes' and 'mergedclasslabels') given by the phase 4.
+    PATH6='../data/Plant_mergedseedclasslabels.txt' --> the merged results ('nmergeoutcomes' and 'mergedclasslabels') given by the phase 4.
   
     PATH7='../../phase3/data/region_for_phase5.pickle'  --> the initial conditions.
 
@@ -281,8 +281,8 @@ Outputs: output the accuracy tables.
 
 #
 (c) Execution procedures:
-1. Phase1: Run 'SpecClust.R' to generate candidate seed regions. It outputs a file 'MNIST_Labels_Spec20.csv' in phase1/data/.
-2. Phase2. Phase 2: Copy the output file 'MNIST_Labels_Spec20.csv' from phase1 and the original files 'MNIST_Labels_5000.csv' and 'MNIST_tSNE_5000.csv' into phase2/data/. The hyperparameter file 'MNIST_generate_seedregions_params.txt' has already been set and stored in phase2/data/. Run 'generate_seedregions_package.m'. It will output three files.
-3. Phase3. Copy the three output files 'MNIST_seedinds.txt', 'MNIST_bilabels.txt', and 'MNIST_seedinds_neighborregions.txt' from phase2 to phase3/data/. Also, copy the output file 'MNIST_Labels_Spec20.csv' from phase1 to phase3/data/. For convenience, we converted 'MNIST_Labels_Spec20.csv' into a pickle file 'Small_MNIST_tSNE_embeddings.pickle' and placed it into phase3/data/. Run 'main_phase3.ipynb'. It will output several immediate pickle files which users may ignore. The three .mat files 'results_of_original.mat', 'results_of_combination.mat', and 'results_of_removal.mat' will be generated in phase3/codes/.
-4. Phase4. Copy the three output files from phase3/codes/ into phase4/data/. The hyperparameter file 'MNIST_merge_seedregions_params.txt' has been stored in phase4/data/. Run 'merge_seedregions_package.m'. It will output one file.
+1. Phase1: Run 'SpecClust.R' to generate candidate seed regions. It outputs a file 'ResNet18_PlantDisease_45K_Spec200.csv' in phase1/data/.
+2. Phase2. Phase 2: Copy the output file 'ResNet18_PlantDisease_45K_Spec200.csv' from phase1 and the original files 'ResNet18_PlantDisease_45K_Labels.csv' and 'ResNet18_PlantDisease_45K_Values.csv' into phase2/data/. The hyperparameter file 'PlantVillage_generate_seedregions_params.txt' has already been set and stored in phase2/data/. Run 'generate_seedregions_example_package.m'. It will output three files.
+3. Phase3. Copy the three output files 'Plant_seedinds.txt', 'Plant_bilabels.txt', and 'Plant_seedinds_neighborregions.txt' from phase2 to phase3/data/. Also, copy the output file 'ResNet18_PlantDisease_45K_Spec200.csv' from phase1 to phase3/data/. For convenience, we converted 'ResNet18_PlantDisease_45K_Spec200.csv' into a pickle file 'Plant_embeddings.pickle' and placed it into phase3/data/. Run 'main_phase3.ipynb'. It will output several immediate pickle files which users may ignore. The three .mat files 'results_of_original.mat', 'results_of_combination.mat', and 'results_of_removal.mat' will be generated in phase3/codes/.
+4. Phase4. Copy the three output files from phase3/codes/ into phase4/data/. The hyperparameter file 'Plant_merge_seedregions_params.txt' has been stored in phase4/data/. Run 'merge_seedregions_package.m'. It will output one file.
 5. Phase5. Copy one output file from phase4 into phase5/data/. Run 'main_phase5.ipynb' to obtain the clustering results 'accu_history.csv' in phase5/codes/.
