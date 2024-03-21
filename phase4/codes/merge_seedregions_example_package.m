@@ -14,24 +14,24 @@ directory='../data/';
 
 % Load t-SNE projection data.
 %datafilename=sprintf('%sMNIST_tSNE.csv',directory);
-datafilename=sprintf('%sMNIST_tSNE_5000.csv',directory);
+datafilename=sprintf('%sResNet18_PlantDisease_45K_Values.csv',directory);
 augdatafileinfoname='dummy';
 
 % Load spectral cluster labels.
 %clustersfilename=sprintf('%sMNIST_SpectralLabel.csv',directory);
 %clustersfilename=sprintf('%sMNIST_Labels_Spec20.csv',directory);
-clustersfilename=sprintf('%sMNIST_Labels_5000.csv',directory);
+clustersfilename=sprintf('%sResNet18_PlantDisease_45K_Spec200.csv',directory);
 
 % Load valid seed indices and their labels.
-seedindsfilename=sprintf('%sMNIST_seedinds_valid.txt',directory);
+seedindsfilename=sprintf('%sResNet18_PlantDisease_seedinds_valid.txt',directory);
 
 
 % Load bilabels of regions.
-bilabelsfilename=sprintf('%sMNIST_bilabels.txt',directory);
+bilabelsfilename=sprintf('%sResNet18_PlantDisease_bilabels.txt',directory);
 
 
 % The parameter values are storted in a file.
-parametersfilename=sprintf('%sMNIST_merge_seedregions_params.txt',directory);
+parametersfilename=sprintf('%sPlatVillage_merge_seedregions_params.txt',directory);
 
 
 % Load seed indices and their labels.
@@ -41,9 +41,9 @@ nseeds=length(seedinds);
 
 
 % Set the file names of prediction outcomes of seed regions.
-originalpredresultsfilename=sprintf('%sMNIST_results_original.mat',directory);
-combpredresultsfilename=sprintf('%sMNIST_results_combination.mat',directory);
-removepredresultsfilename=sprintf('%sMNIST_results_removal.mat',directory);
+originalpredresultsfilename=sprintf('%sresults_original.mat',directory);
+combpredresultsfilename=sprintf('%sresults_combination.mat',directory);
+removepredresultsfilename=sprintf('%sresults_removal.mat',directory);
 
 
 % The merged seed regions are stored in a file.
