@@ -157,7 +157,9 @@ Inputs: following files specified by the path are the input data. The input file
    
     timestr:  --> the prompt for the output file.
 
-    REGION_INDEX_LOC:  --> column location for region index.
+    REG_COLUMN:  --> column name for region index.
+
+    RAW_2D_DATA:  --> 2D data is True; 1D data is False
 
   
 Outputs: output three CNN predicted files for the four scores evaluation, as follows:
@@ -273,7 +275,9 @@ Inputs: the following files specified by the path are the input data. The input 
 
     MNIST: for t-SNE embedded data in MNIST.
 
-    REGION_INDEX_LOC:  --> column location for region index.
+    REG_COLUMN:  --> column name for region index.
+
+    RAW_2D_DATA:  --> 2D data is True; 1D data is False
   
 Outputs: output the accuracy tables.
 
