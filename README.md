@@ -150,7 +150,7 @@ Inputs: following files specified by the path are the input data. The input file
    
     PATH4='../data/ResNet18_PlantDisease_45K_Spec200.csv'  --> the seed region index.
    
-    PATH5='../data/Plant_embeddings.pickle'  --> the embedded data.
+    PATH5='../data/VGG16_PlantDisease_45K_Values.csv'  --> the embedded data.
   
   
     TRIALS:  --> the number of trials for the CNN. Usually, set to 1.
