@@ -127,11 +127,11 @@ Inputs: Details for each parameter are described as follows.
   
 Outputs:
 
-    'Plant_seedinds.txt'
+    'seedinds.txt'
 
-    'Plant_seedinds_neighborregions.txt'
+    'seedinds_neighborregions.txt'
 
-    'Plant_bilabels.txt'
+    'bilabels.txt'
 
 
 3.Phase3 (Python):
@@ -142,15 +142,15 @@ Function: the Python code for generating three CNN predicted results: 'original,
 
 Inputs: following files specified by the path are the input data. The input files presented here are provided as examples for instructional guidance. Users can input their own data based on their applications.
    
-    PATH1='../data/Plant_seedinds.txt'  -->  the seed regions ('seedinds') given by the phase 2.
+    PATH1='../data/seedinds.txt'  -->  the seed regions ('seedinds') given by the phase 2.
   
-    PATH2='../data/Plant_bilabels.txt'  --> the data file to indicate which labels ('bilabels') are effective given by phase 2.
+    PATH2='../data/bilabels.txt'  --> the data file to indicate which labels ('bilabels') are effective given by phase 2.
   
-    PATH3='../data/Plant_seedinds_neighborregions.txt'  --> to specify the neighboring regions of seed regions.
+    PATH3='../data/seedinds_neighborregions.txt'  --> to specify the neighboring regions of seed regions.
    
     PATH4='../data/ResNet18_PlantDisease_45K_Spec200.csv'  --> the seed region index.
    
-    PATH5='../data/VGG16_PlantDisease_45K_Values.csv'  --> the embedded data.
+    PATH5='../data/ResNet18_PlantDisease_45K_Values.csv'  --> the embedded data.
   
   
     TRIALS:  --> the number of trials for the CNN. Usually, set to 1.
@@ -246,7 +246,7 @@ Inputs: information about regions and seed regions, prediction outcomes, and thr
 
 Outputs:
    
-    'Plant_mergedseedclasslabels.txt'
+    'mergedseedclasslabels.txt'
 
 5.Phase5 (Python):
 
@@ -260,7 +260,7 @@ Inputs: the following files specified by the path are the input data. The input 
   
     PATH5='../../phase3/data/Plant_embeddings.pickle'  --> the true labels for the accuracy evaluation.
   
-    PATH6='../data/Plant_mergedseedclasslabels.txt' --> the merged results ('nmergeoutcomes' and 'mergedclasslabels') given by the phase 4.
+    PATH6='../data/mergedseedclasslabels.txt' --> the merged results ('nmergeoutcomes' and 'mergedclasslabels') given by the phase 4.
   
     PATH7='../../phase3/data/region_for_phase5.pickle'  --> the initial conditions.
 
