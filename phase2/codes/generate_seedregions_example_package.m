@@ -6,22 +6,25 @@
 
 clear;
 
-% directory='/mnt/sdb/NN/package_version4/data/';
+%directory='/mnt/sdb/NN/package_version4/data/';
 directory='../data/';
 
 
 % Load MNIST data and spectral cluster labels.
+
 %clustersfilename=sprintf('%sMNIST_SpectralLabel.csv',directory);
 clustersfilename=sprintf('%sResNet18_PlantDisease_45K_Spec200.csv',directory);
-
+%clustersfilename=sprintf('%sResNet18_PlantDisease_45K_Labels.csv',directory);
 
 
 % Load t-SNE projection data.
-% datafilename=sprintf('%sMNIST_tSNE.csv',directory);
+%datafilename=sprintf('%sMNIST_tSNE.csv',directory);
 datafilename=sprintf('%sResNet18_PlantDisease_45K_Values.csv',directory);
 augdatafileinfoname='dummy';
 
 % The parameter values are storted in a file.
+
+%parametersfilename=sprintf('%sMNIST_generate_seedregions_params.txt',directory);
 parametersfilename=sprintf('%sPlantVillage_generate_seedregions_params.txt',directory);
 
 
@@ -36,11 +39,12 @@ de=sprintf(',');
 cells=textscan(fp,form,'Delimiter',de,'Headerlines',1,'TreatAsEmpty',{'NA','na'});
 fclose(fp);
 ndim=length(cells); nimages=length(cells{1});
-data=NaN*ones(nimages,ndim);
+data=NaN*ones(nimages,ndim);%
 for i=1:ndim
  data(:,i)=transpose(cells{i});
 end
-tsnedata=data;
+%tsnedata=data;
+
 
 % Load the augmented data if the file exists.
 filename=sprintf('%s',augdatafileinfoname);
@@ -80,26 +84,46 @@ else
  end
 end
 
+%======= get t-SNE
+fp=fopen(clustersfilename,'r');
+s=fgets(fp);
+ndim=sum(s==',')+1-3; % get first 3 columns
+fseek(fp,0,-1);
+%form=[repmat('%f',1,ndim)];
+form=['%f','%f','%f','%s','%d','%d'];
+de=sprintf(',');
+cells=textscan(fp,form,'Delimiter',de,'Headerlines',1,'TreatAsEmpty',{'NA','na'});
+fclose(fp);
+tsnedata=NaN*ones(nimages,ndim);
+for i=1:ndim
+ tsnedata(:,i)=transpose(cells{i});
+end
+%========
+
+
 % Load cluster labels of data points.
 % Also load the true labels of data points.
 % Find dominant class labels of regions.
 filename=sprintf('%s',clustersfilename);
 fp=fopen(filename,'r');
-form=['%f','%f','%f','%d','%d'];
+%form=['%s','%d','%s'];
+form=['%f','%f','%f','%s','%d','%d']; %
 de=sprintf(',');
 cells=textscan(fp,form,'Delimiter',de,'Headerlines',1,'TreatAsEmpty',{'NA','na'});
 fclose(fp);
-regionneighborlabels=cells{5};
+regionneighborlabels=cells{6}; % get region index for each image
 regionneighborlabels=transpose(regionneighborlabels);
 nregions=max(regionneighborlabels);
+
 
 
 % Obtain class labels of images.
 imagelabels=zeros(1,nimages);
 ulabels={}; nulabels=0;
 for n=1:nimages
- l=cells{4}(n);
- str=sprintf('%s',l);
+ %str=cells{6}{n};%
+ str =int2str(cells{5}(n)); %get class label for each image
+ %str=str(2:(length(str)-1)); %remove two quote marks
  [a,b]=ismember(str,ulabels);
  if (b<=0)
   nulabels=nulabels+1;
@@ -150,15 +174,15 @@ diffratiothre=params(26);
 
 % Run generate_seedregions_package.m.
 
-%tic;
+tic;
 [nseeds,seedinds,bilabels,regionpairD,nbregioninds]=generate_seedregions_package(data,augdata,tsnedata,regionneighborlabels,filter,numthre,fracthre,topthre,nimagesthre,mthre,lwdthre,uppthre,nmarkersthre,rankthre,rankratiothre,overlapthre,sizethre,disparitythre,highthre,dthre,nnbsthre,sharedthre,nvalidnbsthre,rthre,regionpairDmode,maxnseeds,nclassesthre,ratiothre,foldthre,diffratiothre);
-%toc;
+toc;
 
 
 % The seed indices and bilabels are stored in output files.
-seedindsfilename=sprintf('%sMNIST_seedinds.txt',directory);
-bilabelsfilename=sprintf('%sMNIST_bilabels.txt',directory);
-nbregionsfilename=sprintf('%sMNIST_seedinds_neighborregions.txt',directory);
+seedindsfilename=sprintf('%sseedinds.txt',directory);
+bilabelsfilename=sprintf('%sbilabels.txt',directory);
+nbregionsfilename=sprintf('%sseedinds_neighborregions.txt',directory);
 
 
 % Report seed indices.
