@@ -501,10 +501,10 @@ while (flag==1)
  end
 
  % Debug
- for i=1:nseeds
-  fprintf('%d ',slabels(i));
- end
- fprintf('\n');
+ %for i=1:nseeds
+ % fprintf('%d ',slabels(i));
+ %end
+ %fprintf('\n');
 
  if (length(linds)>0)
 
@@ -513,11 +513,11 @@ while (flag==1)
   ss=ss(find(discard(ss)==0));
 
   % Debug
-  fprintf('i=%d, ss=',i);
-  for ii=1:length(ss)
-   fprintf('%d ',ss(ii));
-  end
-  fprintf('\n');
+  %fprintf('i=%d, ss=',i);
+  %for ii=1:length(ss)
+  % fprintf('%d ',ss(ii));
+  %end
+  %fprintf('\n');
 
   sW=W(ss,ss);
   tmpvec=sum(sW); sD=diag(tmpvec);

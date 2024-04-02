@@ -23,11 +23,13 @@ augdatafileinfoname='dummy';
 clustersfilename=sprintf('%sResNet18_PlantDisease_45K_Spec200.csv',directory);
 
 % Load valid seed indices and their labels.
-seedindsfilename=sprintf('%sResNet18_PlantDisease_seedinds_valid.txt',directory);
+%seedindsfilename=sprintf('%sResNet18_PlantDisease_seedinds_valid.txt',directory);
+seedindsfilename=sprintf('%sseedinds.txt',directory);
 
 
 % Load bilabels of regions.
-bilabelsfilename=sprintf('%sResNet18_PlantDisease_bilabels.txt',directory);
+%bilabelsfilename=sprintf('%sResNet18_PlantDisease_bilabels.txt',directory);
+bilabelsfilename=sprintf('%sbilabels.txt',directory);
 
 
 % The parameter values are storted in a file.
@@ -41,13 +43,17 @@ nseeds=length(seedinds);
 
 
 % Set the file names of prediction outcomes of seed regions.
-originalpredresultsfilename=sprintf('%sresults_original.mat',directory);
-combpredresultsfilename=sprintf('%sresults_combination.mat',directory);
-removepredresultsfilename=sprintf('%sresults_removal.mat',directory);
+%originalpredresultsfilename=sprintf('%sresults_original.mat',directory);
+%combpredresultsfilename=sprintf('%sresults_combination.mat',directory);
+%removepredresultsfilename=sprintf('%sresults_removal.mat',directory);
+originalpredresultsfilename=sprintf('%sresults_of_original.mat',directory);
+combpredresultsfilename=sprintf('%sresults_of_combination.mat',directory);
+removepredresultsfilename=sprintf('%sresults_of_removal.mat',directory);
 
 
 % The merged seed regions are stored in a file.
-mergedclasslabelsfilename=sprintf('%sMNIST_mergedseedclasslabels.txt',directory);
+%mergedclasslabelsfilename=sprintf('%sMNIST_mergedseedclasslabels.txt',directory);
+mergedclasslabelsfilename=sprintf('%smergedseedclasslabels.txt',directory);
 
 
 % Load the input data.
