@@ -217,7 +217,7 @@ for n=1:nconfigs
  end
 end
 for i=1:nseeds
- fprintf(fout,'%d',seedinds(n),9)
+ fprintf(fout,'%d%c',seedinds(i),9);
  for j=1:nconfigs
   k=mergedclasslabels(j,i);
   fprintf(fout,'%d',k);
