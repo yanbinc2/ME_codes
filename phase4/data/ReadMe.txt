@@ -3,7 +3,7 @@ https://staff.stat.sinica.edu.tw/chyeang/ME/PlantDisease_embeddings.zip
 embedded dataset: ResNet18_PlantDisease_45K_Values.csv
 
 
-(2) Get the following three files from phase 3 and put to here. Those three files are empty currently.
+(2) Get the following three files from phase 3 and put to here. The three files are empty currently.
 results_of_combination.mat
 results_of_original.mat
 results_of_removal.mat
