@@ -140,7 +140,7 @@ Outputs:
 
 Function: the Python code for generating three CNN predicted results: 'original,' 'combinational,' and 'removal,' for the evaluation of four scores.
 
-Inputs: following files specified by the path are the input data. The input files presented here are provided as examples for instructional guidance. Users can input their own data based on their applications.
+Inputs: the files specified by the paths are the input data. The input files are demonstrated for the instructional guidance. Users may input their own files based on their applications.
    
     PATH1='../data/seedinds.txt'  -->  the seed regions ('seedinds') given by the phase 2.
   
@@ -151,15 +151,16 @@ Inputs: following files specified by the path are the input data. The input file
     PATH4='../data/ResNet18_PlantDisease_45K_Spec200.csv'  --> the seed region index.
    
     PATH5='../data/ResNet18_PlantDisease_45K_Values.csv'  --> the embedded data.
+    
+    Followings are parameters:
   
-  
-    TRIALS:  --> the number of trials for the CNN. Usually, set to 1.
+    TRIALS: the number of trials for the CNN. Usually, set to 1.
    
-    timestr:  --> the prompt for the output file.
+    timestr: the prompt for the output file.
 
-    REG_COLUMN:  --> column name for region index.
+    REG_COLUMN: column name for region index.
 
-    RAW_2D_DATA:  --> 2D data is True; 1D data is False
+    RAW_2D_DATA: 2D data is True; 1D data is False
 
   
 Outputs: output three CNN predicted files for the four scores evaluation, as follows:
@@ -254,30 +255,37 @@ Outputs:
 
 Function: the Python code for merging and expanding seed regions.
 
-Inputs: the following files specified by the path are the input data. The input files presented here are provided as examples for instructional guidance. Users can input their own data based on their applications.
+Inputs: the files specified by the paths are the input data. The input files are demonstrated for the instructional guidance. Users may input their own files based on their applications.
     
-    PATH4='../../phase3/data/ResNet18_PlantDisease_45K_Labels.csv'  --> the data file to specify the entire region index.
+    PATH4='../../phase3/data/ResNet18_PlantDisease_45K_Spec200.csv'  --> the data file to specify the entire region index.
   
-    PATH5='../../phase3/data/Plant_embeddings.pickle'  --> the true labels for the accuracy evaluation.
+    PATH5='../../phase3/data/embedded_data.pickle'  --> the true labels for the accuracy evaluation.
   
-    PATH6='../data/mergedseedclasslabels.txt' --> the merged results ('nmergeoutcomes' and 'mergedclasslabels') given by the phase 4.
+    PATH6='../data/mergedseedclasslabels.txt' --> the merged results given by the phase 4.
   
     PATH7='../../phase3/data/region_for_phase5.pickle'  --> the initial conditions.
 
+    
+    
+    Followings are parameters:
 
+    MNIST: for t-SNE embedded data in MNIST. True: MNIST; False: not MNIST
+    
     NUM_CASE: to indicate how many cases in the merged seed regions outcomes.
    
     INTE_bool: the switch to specify the intergration netwrok mode or single network mode.
-   
-    ITE_FROM: the start point of the loop. This is for the special case or debugging.
-       
+    
     SAVE_bool: to save the results.
+    
+    ITE_FROM: the start point of the loop. This is for the special case or debugging.
+    
+    REG_COLUMN: column name for region index.
 
-    MNIST: for t-SNE embedded data in MNIST.
-
-    REG_COLUMN:  --> column name for region index.
-
-    RAW_2D_DATA:  --> 2D data is True; 1D data is False
+    RAW_2D_DATA: 2D data is True; 1D data is False
+    
+    interpret_path: the path of the output file
+    
+    AMOUNT_ITE: Number of iterations
   
 Outputs: output the accuracy tables.
 
