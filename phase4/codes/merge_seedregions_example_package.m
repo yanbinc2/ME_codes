@@ -203,14 +203,38 @@ toc;
 
 
 % Report the merged seed classes.
+
+nconfigs=length(mergedclasslabels(:,1));
 filename=sprintf('%s',mergedclasslabelsfilename);
 fout=fopen(filename,'w');
-fprintf(fout,'index%cclass\n',9);
-for n=1:nseeds
- fprintf(fout,'%d%c%d\n',seedinds(n),9,mergedclasslabels(n));
+fprintf(fout,'index%c',9);
+for n=1:nconfigs
+ fprintf(fout,'class%d',n);
+ if (n<nconfigs)
+  fprintf(fout,'%c',9);
+ else
+  fprintf(fout,'\n');
+ end
+end
+for i=1:nseeds
+ fprintf(fout,'%d',seedinds(n),9)
+ for j=1:nconfigs
+  k=mergedclasslabels(j,i);
+  fprintf(fout,'%d',k);
+  if (j<nconfigs)
+   fprintf(fout,'%c',9);
+  else
+   fprintf(fout,'\n');
+  end
+ end
 end
 fclose(fout);
 
 
-
-
+%filename=sprintf('%s',mergedclasslabelsfilename);
+%fout=fopen(filename,'w');
+%fprintf(fout,'index%cclass\n',9);
+%for n=1:nseeds
+% fprintf(fout,'%d%c%d\n',seedinds(n),9,mergedclasslabels(n));
+%end
+%fclose(fout);
