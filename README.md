@@ -58,7 +58,7 @@ Inputs:
 
 Outputs:
 
-    "ResNet18_PlantDisease_45K_Spec200" - Result of clustering appended as a new column to the original  "ResNet18_PlantDisease_45K_Labels" file.
+    "ResNet18_PlantDisease_45K_Spec200_sampling.csv" - Result of clustering appended as a new column to the original  "ResNet18_PlantDisease_45K_Labels" file.
    
 
 2.Phase2 (Matlab):
