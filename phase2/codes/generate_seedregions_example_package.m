@@ -13,13 +13,13 @@ directory='../data/';
 % Load MNIST data and spectral cluster labels.
 
 %clustersfilename=sprintf('%sMNIST_SpectralLabel.csv',directory);
-clustersfilename=sprintf('%sResNet18_PlantDisease_45K_Spec200.csv',directory);
+clustersfilename=sprintf('%sResNet18_PlantDisease_45K_Spec200_sampling.csv',directory);
 %clustersfilename=sprintf('%sResNet18_PlantDisease_45K_Labels.csv',directory);
 
 
 % Load t-SNE projection data.
 %datafilename=sprintf('%sMNIST_tSNE.csv',directory);
-datafilename=sprintf('%sResNet18_PlantDisease_45K_Values.csv',directory);
+datafilename=sprintf('%sResNet18_PlantDisease_45K_Values_sampling.csv',directory);
 augdatafileinfoname='dummy';
 
 % The parameter values are storted in a file.

@@ -58,10 +58,22 @@ if (filter==1)
  for n=1:nregions
   ss=find(regionneighborlabels==n); 
   subdata=tsnedata(ss,:);
-  [nhighvals,inds]=demarcate_center_zones(subdata);
-  if (nhighvals>=50)
-   inds=[];
+
+% === Yan-Bin ===
+%   [nhighvals,inds]=demarcate_center_zones(subdata);
+%   if (nhighvals>=50)
+%    inds=[];
+%   end
+  if (isempty(subdata)==0) %non empty
+      [nhighvals,inds]=demarcate_center_zones(subdata);
+      if (nhighvals>=50)
+       inds=[];
+      end
+  else
+      inds=[];
   end
+% ==========
+
   bilabels(ss,1)=n;
   bilabels(ss(inds),2)=1;
  end
@@ -407,8 +419,14 @@ for n=1:nblocks
     s1=find(labels1==i); s2=find(labels2==j);
     tmpD=sD(s1,s2);
     val=mean(tmpD(:));
-    regionpairD(i,j)=val;
-    regionpairD(j,i)=val;
+    % === Yan-Bin ===
+    %regionpairD(i,j)=val;
+    %regionpairD(j,i)=val;
+    if (isnan(val)==0) %non NaN
+        regionpairD(i,j)=val;
+        regionpairD(j,i)=val;
+    end
+    % ==========
    end
   end
 
