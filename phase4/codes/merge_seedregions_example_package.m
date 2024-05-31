@@ -14,13 +14,13 @@ directory='../data/';
 
 % Load t-SNE projection data.
 %datafilename=sprintf('%sMNIST_tSNE.csv',directory);
-datafilename=sprintf('%sResNet18_PlantDisease_45K_Values.csv',directory);
+datafilename=sprintf('%sResNet18_PlantDisease_45K_Values_sampling.csv',directory);
 augdatafileinfoname='dummy';
 
 % Load spectral cluster labels.
 %clustersfilename=sprintf('%sMNIST_SpectralLabel.csv',directory);
 %clustersfilename=sprintf('%sMNIST_Labels_Spec20.csv',directory);
-clustersfilename=sprintf('%sResNet18_PlantDisease_45K_Spec200.csv',directory);
+clustersfilename=sprintf('%sResNet18_PlantDisease_45K_Spec200_sampling.csv',directory);
 
 % Load valid seed indices and their labels.
 %seedindsfilename=sprintf('%sResNet18_PlantDisease_seedinds_valid.txt',directory);
