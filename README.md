@@ -141,7 +141,7 @@ Outputs:
 
 Function: the Python code for generating three CNN predicted results: 'original,' 'combinational,' and 'removal,' for the evaluation of four scores.
 
-Inputs: the files specified by the paths are the input data. The input files are demonstrated for the instructional guidance. Users may input their own files based on their applications.
+Inputs: the input files are specified in the begining of the source code, as shown as follows.
    
     PATH1='../data/seedinds.txt'  -->  the seed regions ('seedinds') given by the phase 2.
   
@@ -256,9 +256,9 @@ Outputs:
 
 Function: the Python code for merging and expanding seed regions.
 
-Inputs: the files specified by the paths are the input data. The input files are demonstrated for the instructional guidance. Users may input their own files based on their applications.
+Inputs: the input files are specified in the begining of the source code, as shown as follows.
     
-    PATH4='../../phase3/data/ResNet18_PlantDisease_45K_Spec200.csv'  --> the data file to specify the entire region index.
+    PATH4='../../phase3/data/ResNet18_PlantDisease_45K_Spec200_sampling.csv'  --> the data file to specify the entire region index.
   
     PATH5='../../phase3/data/embedded_data.pickle'  --> the true labels for the accuracy evaluation.
   
@@ -291,6 +291,8 @@ Inputs: the files specified by the paths are the input data. The input files are
 Outputs: output the accuracy tables.
 
     'accu_history.csv'  --> accuracy tables.
+    
+    Meanwhile, we also print out the different types of the accuracy at the output of this ipynb file.
 
 #
 (c) Execution procedures:
