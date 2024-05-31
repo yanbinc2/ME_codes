@@ -58,6 +58,7 @@ Inputs:
 
 Outputs:
 
+    "ResNet18_PlantDisease_45K_Values_sampling.csv" - subset of the embedded dataset.
     "ResNet18_PlantDisease_45K_Spec200_sampling.csv" - Result of clustering appended as a new column to the original  "ResNet18_PlantDisease_45K_Labels" file.
    
 
