@@ -149,9 +149,9 @@ Inputs: the files specified by the paths are the input data. The input files are
   
     PATH3='../data/seedinds_neighborregions.txt'  --> to specify the neighboring regions of seed regions.
    
-    PATH4='../data/ResNet18_PlantDisease_45K_Spec200.csv'  --> the seed region index.
+    PATH4='../data/ResNet18_PlantDisease_45K_Spec200_sampling.csv'  --> the seed region index.
    
-    PATH5='../data/ResNet18_PlantDisease_45K_Values.csv'  --> the embedded data.
+    PATH5='../data/ResNet18_PlantDisease_45K_Values_sampling.csv'  --> the embedded data.
     
     Followings are parameters:
   
