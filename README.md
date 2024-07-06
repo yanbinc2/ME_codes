@@ -1,11 +1,11 @@
 #==========================================================
 ## ME Algorithm, 2024
-#### Yan-Bin Chen (陳彥賓) yanbin@ntu.edu.tw; <br>
-#### Khong Loon Tiong (張孔綸) khongloontiong@gmail.com; <br>
-#### Chen-Hsiang Yeang (楊振翔) chyeang@stat.sinica.edu.tw
-#### Institute of Statistical Science, Academia Sinica, Taipei, Taiwan.
-#### Master Program in Statistics, National Taiwan University, Taipei, Taiwan.
-#### March, 2024
+#### Yan-Bin Chen (陳彥賓)(1)(2) yanbin@ntu.edu.tw; <br>
+#### Khong Loon Tiong (張孔綸)(1) khongloontiong@gmail.com; <br>
+#### Chen-Hsiang Yeang (楊振翔)(1) chyeang@stat.sinica.edu.tw
+#### (1)Institute of Statistical Science, Academia Sinica, Taipei, Taiwan.
+#### (2)Master Program in Statistics, National Taiwan University, Taipei, Taiwan.
+#### July, 2024
 #==========================================================
 #
 (a) Abstract:
