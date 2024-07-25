@@ -1,0 +1,6 @@
+name	value
+filter	1
+regionpairDmode	1
+rthre	1.1
+maxnseeds	22
+diffratiothre	0.04
