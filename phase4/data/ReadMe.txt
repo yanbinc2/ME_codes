@@ -2,7 +2,7 @@
 ResNet18_PlantDisease_45K_Spec200_sampling.zip
 ResNet18_PlantDisease_45K_Values_sampling.zip
 
-(2) Get the following three files from phase 3 and put to here. The three files are empty currently.
+(2) Get the following three files from phase 3 and put to here.
 results_of_combination.mat
 results_of_original.mat
 results_of_removal.mat
