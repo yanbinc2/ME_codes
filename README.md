@@ -4,7 +4,7 @@
 #### Khong Loon Tiong (張孔綸)(1) khongloontiong@gmail.com <br>
 #### Chen-Hsiang Yeang (楊振翔)(1) chyeang@stat.sinica.edu.tw
 #### (1)Institute of Statistical Science, Academia Sinica, Taipei, Taiwan.
-#### (2)Master Program in Statistics, National Taiwan University, Taipei, Taiwan.
+#### (2)Master Program in Statistics, CGE, National Taiwan University (NTU), Taipei, Taiwan.
 #### July, 2024
 #==========================================================
 #
