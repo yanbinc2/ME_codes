@@ -1,0 +1,6 @@
+name	value
+usemarker	0
+nprednumthre	100
+pvalthre	0.2
+ntoprankthre	3
+reducedrankscorethre	10
