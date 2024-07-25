@@ -39,7 +39,7 @@ The ME five phases deployed here follow the following tree structure.
           
           └── phase5
 
-We provide a small toy dataset for the users to experience the ME algorithm, which is a subset sampling from "PlantVillage". This toy dataset is an embedded dataset named "ResNet18_PlantDisease_45K_Values_sampling.zip", and is located in the phase1/data/ directory. We experimented with the ME algorithm on a GPU server consisting of an Intel® Xeon® CPU E5-2667 v4 3.20 GHz, 256 GB RAM, and an NVIDIA GPU Quadro P4000. The software we applied includes R 4.1.1, RStudio, the kknn package for R, Python 3.7.9, TensorFlow 2.1.0, and Matlab 9.10.0 (R2021a).
+We provide a small dataset for users to experience the ME algorithm, which is a subset sampled from "PlantVillage". The dataset is named "ResNet18_PlantDisease_45K_Values_sampling.zip" and is located in the phase1/data/ directory. In other words, the user doesn't need to run phase1 and can start from phase2. We experimented with the ME algorithm on a GPU server consisting of an Intel® Xeon® CPU E5-2667 v4 3.20 GHz, 256 GB RAM, and an NVIDIA GPU Quadro P4000. The software we applied includes R 4.1.1, RStudio, the kknn package for R, Python 3.7.9, TensorFlow 2.1.0, and Matlab 9.10.0 (R2021a).
 
 #
 (b) File descriptions:
@@ -70,7 +70,7 @@ We provide a small toy dataset for the users to experience the ME algorithm, whi
 
 1. Phase1 (R language):
    
-   Run 'SpecClust.R' to generate candidate seed regions. It outputs the files 'ResNet18_PlantDisease_45K_Spec200_sampling.csv' and 'ResNet18_PlantDisease_45K_Values_sampling.csv' in the phase1/data/.
+   Run 'SpecClust.R' to generate candidate seed regions. It outputs the files 'ResNet18_PlantDisease_45K_Spec200_sampling.csv' and 'ResNet18_PlantDisease_45K_Values_sampling.csv'.
 
 2. Phase2 (Matlab):
    
